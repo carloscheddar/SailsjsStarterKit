@@ -133,7 +133,8 @@ module.exports = function (grunt) {
   grunt.loadTasks(depsPath + '/grunt-contrib-cssmin/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-less/tasks');
   grunt.loadTasks(depsPath + '/grunt-contrib-coffee/tasks');
-  grunt.loadTasks('node_modules/grunt-contrib-sass/tasks'); //Add this to support Sass
+  grunt.loadTasks('node_modules/grunt-contrib-compass/tasks'); //Add this to support Compass
+
 
   // Project configuration.
   grunt.initConfig({
@@ -207,26 +208,16 @@ module.exports = function (grunt) {
        * Sass Support
        *******************************************/
 
-    sass: {
+    compass: {
       dev: {
         options: {
-          style: 'expanded' //Set your prefered style for development here.
-        },
-        files: [{
-          expand: true,
-          cwd: 'assets/styles/',
-          src: ['*.scss', '*.sass'], // Feel free to remove a format if you do not use it.
-          dest: '.tmp/public/styles/',
-          ext: '.css'
-        }, {
-          expand: true,
-          cwd: 'assets/linker/styles/',
-          src: ['*.scss', '*.sass'], // Feel free to remove a format if you do not use it.
-          dest: '.tmp/public/linker/styles/',
-          ext: '.css'
-        }]
+          sassDir: 'assets/linker/styles',
+          cssDir: '.tmp/public/linker/styles/',
+          quiet: true
+        }
       }
     },
+
       /*******************************************
        * End Sass Support
        *******************************************/
@@ -452,7 +443,7 @@ module.exports = function (grunt) {
     'clean:dev',
     'jst:dev',
     'less:dev',
-    'sass:dev',
+    'compass:dev', // This creates two error outputs in gruntfile
     'copy:dev',
     'coffee:dev'
   ]);
@@ -483,7 +474,7 @@ module.exports = function (grunt) {
     'clean:dev',
     'jst:dev',
     'less:dev',
-    'sass:dev',
+    'compass:dev',
     'copy:dev',
     'coffee:dev',
     'concat',

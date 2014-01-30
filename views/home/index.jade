@@ -1,0 +1,50 @@
+//- body
+//-   h1 Jade - node template engine
+//-   #container.col
+//-     if youAreUsingJade
+//-       p You are amazing
+//-     else
+//-       p Get on it!
+//-     p.
+//-       Jade is a terse and simple
+//-       templating language with a
+//-       strong focus on performance
+//-       and powerful features.
+//-     p=hello
+//-     h1 Bitch
+
+link(rel='stylesheet', href='linker/styles/index.css')
+
+.example
+    table(cellspacing='0')
+        thead
+          tr.odd
+            th Title
+            th One
+            th Two
+            th Three
+            th Four
+            th Row Total
+        tbody
+          tr.even
+            th Single
+            td.numeric 1.0
+            td.numeric 2.0
+            td.numeric 3.0
+            td.numeric 4.0
+            td.numeric 10.0
+          tr.odd
+            th Tens
+            td.numeric 10.0
+            td.numeric 20.0
+            td.numeric 30.0
+            td.numeric 40.0
+            td.numeric 100.0
+        tfoot
+          tr.even
+            th Total
+            td.numeric 11.0
+            td.numeric 22.0
+            td.numeric 33.0
+            td.numeric 44.0
+            td.numeric 110.0

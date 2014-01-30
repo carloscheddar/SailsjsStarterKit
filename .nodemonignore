@@ -1,1 +1,5 @@
-.tmp/*
+.tmp
+.git
+assets
+views/layout.jade
+README.md
