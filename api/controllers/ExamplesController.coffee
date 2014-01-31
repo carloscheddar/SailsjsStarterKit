@@ -22,12 +22,7 @@ module.exports =
   `/home`
   ###
   index: (req, res) ->
-
-    # Send a JSON response
-    x= 10
-    y="bitch"
-    res.view hello: y
-
+    res.view()
 
   ###
   Overrides for the settings in `config/controllers.js`
