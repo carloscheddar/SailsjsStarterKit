@@ -205,7 +205,7 @@ module.exports = function (grunt) {
     },
 
       /*******************************************
-       * Sass Support
+       * Compass Support
        *******************************************/
 
     compass: {
@@ -213,13 +213,14 @@ module.exports = function (grunt) {
         options: {
           sassDir: 'assets/linker/styles',
           cssDir: '.tmp/public/linker/styles/',
+          raw: "require 'bootstrap-sass'",
           quiet: true
         }
       }
     },
 
       /*******************************************
-       * End Sass Support
+       * End Compass Support
        *******************************************/
 
     coffee: {
