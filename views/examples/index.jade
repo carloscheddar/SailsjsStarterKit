@@ -1,14 +1,396 @@
-link(rel='stylesheet', href='linker/styles/index.css')
-
-body
-  h1 Jade - node template engine
-  #container.col
-    if youAreUsingJade
-      p You are amazing
-    else
-      p Get on it!
-    p.
-      Jade is a terse and simple
-      templating language with a
-      strong focus on performance
-      and powerful features.
+//- !!! 5
+html
+  head
+    title Tessellate by HTML5 UP
+    meta(http-equiv='content-type', content='text/html; charset=utf-8')
+    meta(name='description', content='')
+    meta(name='keywords', content='')
+    link(href='http://fonts.googleapis.com/css?family=Roboto:100,100italic,300,300italic,400,400italic', rel='stylesheet', type='text/css')
+    //if lte IE 8
+      script(src='linker/landing/ie/html5shiv.js')
+    script(src='linker/js/jquery.min.js')
+    script(src='linker/js/skel.min.js')
+    script(src='linker/js/init.js')
+    noscript
+      link(rel='stylesheet', href='linker/styles/landing/skel-noscript.css')
+      link(rel='stylesheet', href='linker/styles/landing/style.css')
+      link(rel='stylesheet', href='linker/styles/landing/style-wide.css')
+    //if lte IE 8
+      link(rel='stylesheet', href='linker/styles/landing/ie/v8.css')
+    //if lte IE 9
+      link(rel='stylesheet', href='linker/styles/landing/ie/v9.css')
+  body
+    //
+       Header
+    section#header.dark
+      header
+        h1 Welcome to Tessellate
+        p
+          | A free responsive site template by
+          a(href='http://html5up.net/') HTML5 UP
+      footer
+        a.button.scrolly(href='#first') Proceed to second phase
+    //
+       First
+    section#first.main
+      header
+        .container
+          h2 Tessellate is a free responsive site template
+          p
+            | Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat
+            br
+            | feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.
+      .content.dark.style1.featured
+        .container
+          .row
+            .4u
+              section
+                span.feature-icon
+                  span.fa.fa-clock-o
+                header
+                  h3 Gravida
+                p
+                  | Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
+                  | Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
+                  | ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                  | accumsan vivamus.
+            .4u
+              section
+                span.feature-icon
+                  span.fa.fa-bolt
+                header
+                  h3 Vivamus
+                p
+                  | Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
+                  | Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
+                  | ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                  | accumsan vivamus.
+            .4u
+              section
+                span.feature-icon
+                  span.fa.fa-cloud
+                header
+                  h3 Accumsan
+                p
+                  | Gravida dis placerat lectus ante vel nunc euismod est turpis sodales.
+                  | Diam tempor dui lacinia accumsan vivamus. Gravida dis placerat lectus
+                  | ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                  | accumsan vivamus.
+          .row
+            .12u
+              footer
+                a.button.scrolly(href='#second') Gravida tempor lacinia
+    //
+       Second
+    section#second.main
+      header
+        .container
+          h2 Euismod sed feugiat lorem tempus magna
+          p
+            | Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat
+            br
+            | feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.
+      .content.dark.style2
+        .container
+          .row
+            .4u
+              section
+                h3 Augue vivamus sed ipsum commodo lorem dolor
+                p
+                  | Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
+                  | tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
+                  | vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
+                  | augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
+                  | lorem ipsum dolor placerat magna tempus feugiat.
+                p
+                  | Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                  | accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
+                  | euismod lorem ipsum dolor.
+                footer
+                  a.button.scrolly(href='#third') Accumsan nisi tempor
+            .8u
+              .row.no-collapse
+                .6u
+                  a.image.full(href='http://ineedchemicalx.deviantart.com/art/You-and-I-collide-401457901')
+                    img(src='linker/images/pic01.jpg', alt='')
+                .6u
+                  a.image.full(href='http://ineedchemicalx.deviantart.com/art/Emperor-of-the-Stars-370265193')
+                    img(src='linker/images/pic02.jpg', alt='')
+              .row.no-collapse
+                .6u
+                  a.image.full(href='http://ineedchemicalx.deviantart.com/art/Sherlockin-369847236')
+                    img(src='linker/images/pic03.jpg', alt='')
+                .6u
+                  a.image.full(href='http://ineedchemicalx.deviantart.com/art/A-breath-of-Hope-366359145')
+                    img(src='linker/images/pic04.jpg', alt='')
+              .row.no-collapse
+                .6u
+                  a.image.full(href='http://ineedchemicalx.deviantart.com/art/The-Pursuit-355003425')
+                    img(src='linker/images/pic05.jpg', alt='')
+                .6u
+                  a.image.full(href='http://ineedchemicalx.deviantart.com/art/Cherish-320041163')
+                    img(src='linker/images/pic06.jpg', alt='')
+    //
+       Third
+    section#third.main
+      header
+        .container
+          h2 Ornare varius lorem ipsum ante lectus
+          p
+            | Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat
+            br
+            | feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.
+      .content.dark.style3
+        .container
+          span.image.featured
+            img(src='linker/images/pic07.jpg', alt='')
+          .row
+            .4u
+              h3 Diam vivamus turpis lorem sodales lectus ornare
+              p
+                | Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
+                | tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
+                | vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
+                | augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
+                | lorem ipsum dolor placerat magna tempus feugiat.
+              p
+                | Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                | accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
+                | euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu eget ornare varius
+                | gravida dolore euismod lorem ipsum dolor sit amet consequat. vivamus nisi eu
+                | eget ornare et magna.
+            .4u
+              p
+                | Gravida dis placerat lectus ante vel nunc euismod est turpis sodales. Diam
+                | tempor dui lacinia eget ornare varius gravida. Gravida dis placerat lectus ante
+                | vel nunc euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus
+                | augue cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
+                | lorem ipsum dolor placerat magna tempus feugiat.
+              p
+                | Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                | accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida dolore
+                | euismod lorem ipsum dolor sit amet consequat eget ornare varius gravida euismod.
+                | Gravida dis lorem ipsum dolor placerat magna tempus feugiat magna tempus lorem.
+              p
+                | Lectus ante vel nunc euismod est turpis sodales. Diam tempor dui lacinia
+                | accumsan vivamus augue cubilia.
+            .4u
+              p
+                | Placerat lectus ante vel nunc euismod est turpis sodales. Diam tempor dui
+                | lacinia eget ornare varius gravida. Gravida dis placerat lectus ante vel nunc
+                | euismod est turpis sodales. Diam tempor dui lacinia accumsan vivamus augue
+                | cubilia vivamus nisi eu eget ornare varius gravida euismod.  Gravida dis
+                | lorem ipsum dolor placerat magna tempus feugiat. Lectus ante vel nunc euismod
+                | est turpis sodales. Diam tempor dui lacinia dolore.
+              p
+                | Accumsan vivamus augue cubilia vivamus nisi eu eget ornare varius gravida
+                | dolore euismod lorem ipsum dolor sit amet conseismod lorem ipsum dolor sit amet
+                | consequat lorem ipsum consequat feugiat sed tempus euismod feugiat veroeros.
+              footer
+                a.button.scrolly(href='#fourth') Ipsum ornare lorem dolor
+    //- //
+    //-    Basic Elements
+    //- section.main
+    //-   header
+    //-     .container
+    //-       h2 A Whole Lotta Elements
+    //-       p General purpose elements for every general purpose. Or something like that.
+    //-   .content.style1.dark
+    //-     .container
+    //-       section
+    //-         header
+    //-           h3 Paragraph
+    //-           p This is a byline
+    //-         p
+    //-           | Phasellus nisl nisl, varius id
+    //-           sup porttitor sed pellentesque
+    //-           | ac orci. Pellentesque
+    //-           | habitant
+    //-           strong strong
+    //-           | tristique
+    //-           b bold
+    //-           | et netus
+    //-           i italic
+    //-           | malesuada
+    //-           em emphasized
+    //-           | ac turpis egestas. Morbi
+    //-           | leo suscipit ut. Praesent
+    //-           sub id turpis vitae
+    //-           | turpis pretium ultricies. Vestibulum sit
+    //-           | amet risus elit.
+    //-       section
+    //-         header
+    //-           h3 Blockquote
+    //-         blockquote
+    //-           | Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
+    //-           | tempus euismod. Vestibulum ante ipsum primis in faucibus. Cras sit amet urna eros, id egestas
+    //-           | tempus ante ipsum primis in faucibus orci luctus et ultrices.
+    //-       section
+    //-         header
+    //-           h3 Divider
+    //-         p
+    //-           | Donec consectetur
+    //-           a(href='#') vestibulum dolor et pulvinar
+    //-           | . Etiam vel felis enim, at viverra
+    //-           | ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+    //-           | facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+    //-           | tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+    //-           | posuere cubilia.
+    //-         hr
+    //-         p
+    //-           | Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra
+    //-           | ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci
+    //-           | facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam
+    //-           | tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices
+    //-           | posuere cubilia.
+    //-       section
+    //-         header
+    //-           h3 Unordered List
+    //-         ul.default
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-       section
+    //-         header
+    //-           h3 Ordered List
+    //-         ol.default
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-           li
+    //-             | Donec consectetur vestibulum dolor et vel felis enim at viverra ligula. Ut porttitor sagittis lorem.
+    //-       section
+    //-         header
+    //-           h3 Table
+    //-         .table-wrapper
+    //-           table.default
+    //-             thead
+    //-               tr
+    //-                 th ID
+    //-                 th Name
+    //-                 th Description
+    //-                 th Price
+    //-             tbody
+    //-               tr
+    //-                 td 00001
+    //-                 td Lorem ipsum dolor
+    //-                 td Ut porttitor sagittis lorem quis nisi ornare.
+    //-                 td 29.99
+    //-               tr
+    //-                 td 00002
+    //-                 td Sit amet nullam
+    //-                 td Ut porttitor sagittis lorem quis nisi ornare.
+    //-                 td 19.99
+    //-               tr
+    //-                 td 00003
+    //-                 td Feugiat felis viverra
+    //-                 td Ut porttitor sagittis lorem quis nisi ornare.
+    //-                 td 29.99
+    //-               tr
+    //-                 td 00004
+    //-                 td Sagittis enim felis
+    //-                 td Ut porttitor sagittis lorem quis nisi ornare.
+    //-                 td 19.99
+    //-               tr
+    //-                 td 00005
+    //-                 td Nullam sed vestibulum
+    //-                 td Ut porttitor sagittis lorem quis nisi ornare.
+    //-                 td 19.99
+    //-             tfoot
+    //-               tr
+    //-                 td(colspan='3')
+    //-                 td 100.00
+    //-       section
+    //-         header
+    //-           h3 Form
+    //-         form(method='post', action='#')
+    //-           .row.half
+    //-             .6u
+    //-               input#name.text(type='text', name='name', value='', placeholder='John Doe')
+    //-             .6u
+    //-               input#email.text(type='text', name='email', value='', placeholder='johndoe@domain.tld')
+    //-           .row.half
+    //-             .12u
+    //-               .select
+    //-                 select#department(name='department')
+    //-                   option(value='') Choose a department
+    //-                   option(value='1') Manufacturing
+    //-                   option(value='2') Administration
+    //-                   option(value='3') Support
+    //-           .row.half
+    //-             .12u
+    //-               input#subject.text(type='text', name='subject', value='', placeholder='Enter your subject')
+    //-           .row.half
+    //-             .12u
+    //-               textarea#message(name='message', placeholder='Enter your message')
+    //-           .row
+    //-             .12u
+    //-               ul.actions
+    //-                 li
+    //-                   input.button(type='submit', value='Send Message')
+    //-                 li
+    //-                   input.button.alt(type='reset', value='Clear Form')
+    //
+       Fourth
+    section#fourth.main
+      header
+        .container
+          h2 Sed feugiat ipsum consequat
+          p
+            | Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet consequat
+            br
+            | feugiat. Gravida dis placerat lectus ante vel nunc euismod eget ornare varius gravida euismod lorem ipsum dolor sit amet.
+      .content.style4.featured
+        .container.small
+          form(method='post', action='#')
+            .row.half
+              .6u
+                input.text(type='text', placeholder='Name')
+              .6u
+                input.text(type='text', placeholder='Email')
+            .row.half
+              .12u
+                textarea(name='message', placeholder='Message')
+            .row
+              .12u
+                ul.actions
+                  li
+                    input.button(type='submit', value='Send Message')
+                  li
+                    input.button.alt(type='reset', value='Clear Form')
+    //
+       Footer
+    section#footer
+      ul.icons
+        li
+          a.fa.fa-twitter.solo(href='#')
+            span Twitter
+        li
+          a.fa.fa-facebook.solo(href='#')
+            span Facebook
+        li
+          a.fa.fa-google-plus.solo(href='#')
+            span Google+
+        li
+          a.fa.fa-dribbble.solo(href='#')
+            span Dribbble
+        li
+          a.fa.fa-github.solo(href='#')
+            span GitHub
+      .copyright
+        ul.menu
+          li © Untitled. All rights reserved.
+          li
+            | Design:
+            a(href='http://html5up.net/') HTML5 UP
+          li
+            | Images:
+            a(href='http://ineedchemicalx.deviantart.com') Felicia Simion
