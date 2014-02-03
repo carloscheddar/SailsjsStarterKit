@@ -4,13 +4,15 @@
 ### Objective
 To create an empty Sails.js app that already has tools installed.
 
-### Installed
+### Features
 - Jade Template Engine Support
 - Compass/Sass Support (https://github.com/gruntjs/grunt-contrib-compass)
 - Bootstrap 3.1 Support (https://github.com/twbs/bootstrap-sass)
 - CoffeeScript Support (https://github.com/gruntjs/grunt-contrib-coffee)
 - Nodemon Support (https://github.com/remy/nodemon)
 - Landing page (http://html5up.net/tessellate/)
+- Passport.js
+  - Local Authentication
 
 ### Prerequisites
 - Install Compass
@@ -24,7 +26,7 @@ To create an empty Sails.js app that already has tools installed.
 - jQuery Support
 - Passport.js
 	- OAuth Suport
-	- Local Authentication
+	- Social Networks
 - Email Support (Most likely Sendgrid)
 - MongoDB Support
 - Facebook
