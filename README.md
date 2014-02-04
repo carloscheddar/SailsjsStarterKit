@@ -13,10 +13,13 @@ To create an empty Sails.js app that already has tools installed.
 - Landing page (http://html5up.net/tessellate/)
 - Passport.js
   - Local Authentication
+- MongoDB Support
+- Session Storage using MongoDB
 
 ### Prerequisites
 - Install Compass
 - Install Bootstrap-Sass
+- Install MongoDB
 
 ### Recommended
 - Install Nodemon (https://github.com/remy/nodemon)
@@ -28,12 +31,12 @@ To create an empty Sails.js app that already has tools installed.
 	- OAuth Suport
 	- Social Networks
 - Email Support (Most likely Sendgrid)
-- MongoDB Support
 - Facebook
 - Twitter
 - Foursquare
 - Waze
 - Google
+- internalization(i18n) Support
 
 ### Tips
 - If using CoffeeScript and Nodemon use this command so that Sails restarts when .coffee files are saved:
