@@ -25,13 +25,13 @@ module.exports =
   process: (req, res) ->
     console.log "In AuthController.process"
     passport.authenticate("local", (err, user, info) ->
-      console.log "info:", info
+      console.log "info:", info if err
       console.log "user:", user
       if (err) or (not user)
-        console.log "Redirecting user to be crated"
+        console.log "Redirecting user to be created"
         res.redirect "/create"
         return
-      req.logIn user, (err) ->
+      req.login user, (err) ->
         res.redirect "/login"  if err
         res.redirect "/"
 
