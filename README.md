@@ -17,6 +17,8 @@ To create an empty Sails.js app that already has tools installed.
 - Session Storage using MongoDB
 - Environment file at root(.env)
 - Twitter
+- Console Helpers
+	- Show user where {type: value} if empty shows all users
 
 ### Prerequisites
 - Install Compass
@@ -40,6 +42,7 @@ To create an empty Sails.js app that already has tools installed.
 - internalization(i18n) Support
 - Google Analytics
 - Console Helpers
+	- Destroy All/One
 
 ### Tips
 - If using CoffeeScript and Nodemon use this command so that Sails restarts when .coffee files are saved:
