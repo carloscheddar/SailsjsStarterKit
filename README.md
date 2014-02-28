@@ -15,6 +15,7 @@ To create an empty Sails.js app that already has tools installed.
   - Local Authentication
 - MongoDB Support
 - Session Storage using MongoDB
+- Environment file at root(.env)
 
 ### Prerequisites
 - Install Compass
@@ -42,6 +43,7 @@ To create an empty Sails.js app that already has tools installed.
 - If using CoffeeScript and Nodemon use this command so that Sails restarts when .coffee files are saved:
     ```nodemon -e js,coffee app.js```
 - Use an HTML to Jade converter for the templates found online. I've been using this one http://html2jade.aaron-powell.com/
+- Use autoenv for the environment variables.
 
 
 ### Bugs
