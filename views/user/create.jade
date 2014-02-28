@@ -1,9 +1,12 @@
 form(action='/create', method='post')
   p
-      label(for='email') Email:
-      input#email(type='text', name='email')
-    p
-      label(for='password') Password:
-      input#password(type='password', name='password')
-    p
-      input(type='submit', value='Sign Up')
+    label(for='email') Email:
+    input#email(type='text', name='email')
+  p
+    label(for='username') Username:
+    input#username(type='text', name='username')
+  p
+    label(for='password') Password:
+    input#password(type='password', name='password')
+  p
+    input(type='submit', value='Sign Up')
