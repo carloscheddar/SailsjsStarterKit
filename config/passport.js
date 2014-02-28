@@ -4,7 +4,6 @@ var passport        = require("passport")
   , TwitterStrategy = require("passport-twitter").Strategy;
 
 passport.serializeUser(function(user, done) {
-  console.log('serializer', user);
   done(null, user.id);
 });
 
@@ -19,7 +18,11 @@ passport.deserializeUser(function(id, done) {
  Passport Local Strategy
 */
 
-passport.use(new LocalStrategy(function(email, password, done) {
+passport.use(new LocalStrategy({
+        usernameField: 'email',
+        passwordField: 'password'
+    },
+  function(email, password, done) {
   User.findByEmail(email).done(function(err, user) {
     if (err) {
       return done(null, err);
@@ -35,6 +38,7 @@ passport.use(new LocalStrategy(function(email, password, done) {
           message: "Invalid Password"
         });
       }
+      user = user[0];
       return done(null, user);
     });
   });
@@ -50,7 +54,6 @@ passport.use(new TwitterStrategy({
   callbackURL: "http://127.0.0.1:1337/auth/twitter/callback"
   },
   function(token, tokenSecret, profile, done) {
-    console.log(profile);
     User.findOrCreate({
       username: profile.username
     },
