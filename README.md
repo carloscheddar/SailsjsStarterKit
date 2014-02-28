@@ -16,6 +16,7 @@ To create an empty Sails.js app that already has tools installed.
 - MongoDB Support
 - Session Storage using MongoDB
 - Environment file at root(.env)
+- Twitter
 
 ### Prerequisites
 - Install Compass
@@ -33,11 +34,12 @@ To create an empty Sails.js app that already has tools installed.
 	- Social Networks
 - Email Support (Most likely Sendgrid)
 - Facebook
-- Twitter
 - Foursquare
 - Waze
 - Google
 - internalization(i18n) Support
+- Google Analytics
+- Console Helpers
 
 ### Tips
 - If using CoffeeScript and Nodemon use this command so that Sails restarts when .coffee files are saved:
