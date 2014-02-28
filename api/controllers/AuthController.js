@@ -25,9 +25,10 @@ module.exports = {
     console.log("In AuthController.process");
     passport.authenticate("local", function(err, user, info) {
       if (err) {
+        console.log("error:", err);
         console.log("info:", info);
       }
-      console.log("user:", user);
+
       if (err || (!user)) {
         console.log("Redirecting user to be created");
         res.redirect("/create");
@@ -35,6 +36,7 @@ module.exports = {
       }
       req.login(user, function(err) {
         if (err) {
+          console.log('err', err);
           res.redirect("/login");
         }
         return res.redirect("/");
