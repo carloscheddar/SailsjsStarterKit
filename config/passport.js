@@ -55,19 +55,23 @@ passport.use(new TwitterStrategy({
   callbackURL: "http://127.0.0.1:1337/auth/twitter/callback"
   },
   function(token, tokenSecret, profile, done) {
-    User.findOrCreate({
-      username: profile.username
-    },
-    {
-      username: profile.username,
-      provider: profile.provider
-    },
-    function(err, user) {
-      if (err) {
-        return done(err);
-      }
-      done(null, user);
-    });
+    User.findOne({username: profile.username})
+      .where({provider: profile.provider})
+      .then(function(user) {
+        if (user) {
+          done(null, user);
+        }
+        else {
+          return User.create({
+            username: profile.username,
+            provider: profile.provider
+            });
+        }
+      }).then(function(user){
+        done(null, user);
+      }).fail(function(err) {
+        console.log(err);
+      });
   }
 ));
 
@@ -87,7 +91,6 @@ passport.use(new FacebookStrategy({
           done(null, user);
         }
         else {
-          console.log('profile: ', profile);
           return User.create({
             username: profile.username,
             provider: profile.provider
