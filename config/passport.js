@@ -1,7 +1,8 @@
-var passport        = require("passport")
-  , LocalStrategy   = require("passport-local").Strategy
-  , bcrypt          = require("bcrypt")
-  , TwitterStrategy = require("passport-twitter").Strategy;
+var passport         = require("passport")
+  , LocalStrategy    = require("passport-local").Strategy
+  , bcrypt           = require("bcrypt")
+  , TwitterStrategy  = require("passport-twitter").Strategy
+  , FacebookStrategy = require('passport-facebook').Strategy;
 
 passport.serializeUser(function(user, done) {
   done(null, user.id);
@@ -58,7 +59,8 @@ passport.use(new TwitterStrategy({
       username: profile.username
     },
     {
-      username: profile.username
+      username: profile.username,
+      provider: profile.provider
     },
     function(err, user) {
       if (err) {
@@ -69,6 +71,35 @@ passport.use(new TwitterStrategy({
   }
 ));
 
+/*
+ Passport Facebook Strategy
+*/
+passport.use(new FacebookStrategy({
+    clientID: process.env.FACEBOOK_APP_ID,
+    clientSecret: process.env.FACEBOOK_APP_SECRET,
+    callbackURL: "http://127.0.0.1:1337/auth/facebook/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    User.findOne({username: profile.username})
+      .where({provider: profile.provider})
+      .then(function(user) {
+        if (user) {
+          done(null, user);
+        }
+        else {
+          console.log('profile: ', profile);
+          return User.create({
+            username: profile.username,
+            provider: profile.provider
+            });
+        }
+      }).then(function(user){
+        done(null, user);
+      }).fail(function(err) {
+        console.log(err);
+      });
+  }
+));
 /*
  Initialize Passport
 */
