@@ -51,6 +51,14 @@ module.exports = {
       { successRedirect: '/',
         failureRedirect: '/login' })(req, res, next); //Not sure if this looks like sails
   },
+  facebookLogin: function(req, res) {
+    passport.authenticate('facebook')(req, res); //Not sure if this looks like sails
+  },
+  facebookProcess: function(req, res, next) {
+    passport.authenticate('facebook',
+      { successRedirect: '/',
+        failureRedirect: '/login' })(req, res, next); //Not sure if this looks like sails
+  },
   logout: function(req, res) {
     req.logout();
     res.send("logout successful");
