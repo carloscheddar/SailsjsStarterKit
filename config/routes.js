@@ -39,7 +39,9 @@ module.exports.routes = {
   'get /create': 'UserController.create',
   'post /create': 'UserController.save',
   '/auth/twitter': 'AuthController.twitterLogin',
-  '/auth/twitter/callback': 'AuthController.twitterProcess'
+  '/auth/twitter/callback': 'AuthController.twitterProcess',
+  '/auth/facebook': 'AuthController.facebookLogin',
+  '/auth/facebook/callback': 'AuthController.facebookProcess',
 
   /*
   // But what if you want your home page to display
