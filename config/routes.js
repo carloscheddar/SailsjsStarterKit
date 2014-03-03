@@ -33,14 +33,14 @@ module.exports.routes = {
   //
   // (This would also work if you had a file at: `/views/home.ejs`)
   '/': 'ExamplesController.index',
-  'get /login': "AuthController.login",
-  'post /login': 'AuthController.process',
-  'get /logout': 'AuthController.logout',
-  'get /create': 'UserController.create',
-  'post /create': 'UserController.save',
-  '/auth/twitter': 'AuthController.twitterLogin',
-  '/auth/twitter/callback': 'AuthController.twitterProcess',
-  '/auth/facebook': 'AuthController.facebookLogin',
+  'get /login'             : "AuthController.login",
+  'post /login'            : 'AuthController.process',
+  'get /logout'            : 'AuthController.logout',
+  'get /create'            : 'UserController.create',
+  'post /create'           : 'UserController.save',
+  '/auth/twitter'          : 'AuthController.twitterLogin',
+  '/auth/twitter/callback' : 'AuthController.twitterProcess',
+  '/auth/facebook'         : 'AuthController.facebookLogin',
   '/auth/facebook/callback': 'AuthController.facebookProcess',
 
   /*
