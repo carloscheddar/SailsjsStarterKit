@@ -25,12 +25,9 @@ Overrides for the settings in `config/controllers.js`
 
 module.exports = {
   create: function(req, res) {
-    console.log("Inside UserController.create");
     res.view('user/create');
   },
   save: function(req, res) {
-    console.log("Inside UserController.save");
-    console.log(req.body);
     User.create({
       email: req.body.email,
       password: req.body.password,
@@ -39,10 +36,10 @@ module.exports = {
       if (err) {
         return console.log(err);
       } else {
-        return console.log("User created:", user);
+        return sails.controllers.auth.process(req, res);
+        // This works but not sure if it's the sails way
       }
     });
-    res.view('examples/index');
   },
   _config: {}
 };
