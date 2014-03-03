@@ -8,8 +8,22 @@ module.exports = {
       console.log(users);
     });
   },
-  // destroyAllUsers: function() {
-  // },
+
+  // Look for a way to ask the user if they're sure about destroying
+  destroyAllUsers: function() {
+    User.find().done(function(err, users) {
+      for (var user in users) {
+        users[user].destroy(function(err) {
+          if (err) {
+            console.log(err);
+          }
+          else{
+            console.log("Destroyed all users");
+          }
+        });
+      }
+    });
+  },
 
   // Destroy single user
 };
