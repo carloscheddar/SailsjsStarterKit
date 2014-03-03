@@ -19,6 +19,9 @@ module.exports = {
       // required: true, //Taking this out because there's probably an api that doesn't
                          //provide username
     },
+    provider: {
+      type: "string",
+    },
     password: {
       type: "string",
       // required: true //Can't be required if using social networks
