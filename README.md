@@ -13,12 +13,14 @@ To create an empty Sails.js app that already has tools installed.
 - Landing page (http://html5up.net/tessellate/)
 - Passport.js
   - Local Authentication
+  - Twitter
+  - Facebook
 - MongoDB Support
 - Session Storage using MongoDB
 - Environment file at root(.env)
-- Twitter
 - Console Helpers
 	- Show user where {type: value} if empty shows all users
+  - Destroy All
 
 ### Prerequisites
 - Install Compass
@@ -34,21 +36,20 @@ To create an empty Sails.js app that already has tools installed.
 - Passport.js
 	- OAuth Suport
 	- Social Networks
+  - Foursquare
+  - Waze
+  - Google
 - Email Support (Most likely Sendgrid)
-- Facebook
-- Foursquare
-- Waze
-- Google
 - internalization(i18n) Support
 - Google Analytics
 - Console Helpers
-	- Destroy All/One
+  - Destroy user where...
 
 ### Tips
 - If using CoffeeScript and Nodemon use this command so that Sails restarts when .coffee files are saved:
     ```nodemon -e js,coffee app.js```
 - Use an HTML to Jade converter for the templates found online. I've been using this one http://html2jade.aaron-powell.com/
-- Use autoenv for the environment variables.
+- Use autoenv to automatically load the .env file to the environment.
 
 
 ### Bugs
