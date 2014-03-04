@@ -98,7 +98,7 @@ findOrCreate = function(profile, done) {
     })
     .then(function(user) {
       if (user) {
-        done(null, user);
+        return user;
       } else {
         return User.create({
           username: profile.username,
