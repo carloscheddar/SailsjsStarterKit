@@ -43,6 +43,7 @@ To create an empty Sails.js app that already has tools installed.
 - internalization(i18n) Support
 - Google Analytics
 - Password Reset
+- Flash Messages
 - Console Helpers
   - Destroy user where...
 

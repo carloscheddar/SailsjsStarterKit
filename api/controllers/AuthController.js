@@ -44,20 +44,20 @@ module.exports = {
     })(req, res);
   },
   twitterLogin: function(req, res) {
-    passport.authenticate('twitter')(req, res); //Not sure if this looks like sails
+    passport.authenticate('twitter')(req, res);
   },
   twitterProcess: function(req, res, next) {
     passport.authenticate('twitter',
       { successRedirect: '/',
-        failureRedirect: '/login' })(req, res, next); //Not sure if this looks like sails
+        failureRedirect: '/login' })(req, res, next);
   },
   facebookLogin: function(req, res) {
-    passport.authenticate('facebook')(req, res); //Not sure if this looks like sails
+    passport.authenticate('facebook')(req, res);
   },
   facebookProcess: function(req, res, next) {
     passport.authenticate('facebook',
       { successRedirect: '/',
-        failureRedirect: '/login' })(req, res, next); //Not sure if this looks like sails
+        failureRedirect: '/login' })(req, res, next);
   },
   logout: function(req, res) {
     req.logout();
