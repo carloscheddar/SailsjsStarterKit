@@ -42,6 +42,7 @@ To create an empty Sails.js app that already has tools installed.
 - Email Support (Most likely Sendgrid)
 - internalization(i18n) Support
 - Google Analytics
+- Password Reset
 - Console Helpers
   - Destroy user where...
 
