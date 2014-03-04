@@ -15,6 +15,7 @@ To create an empty Sails.js app that already has tools installed.
   - Local Authentication
   - Twitter
   - Facebook
+  - Google
 - MongoDB Support
 - Session Storage using MongoDB
 - Environment file at root(.env)
@@ -38,7 +39,6 @@ To create an empty Sails.js app that already has tools installed.
 	- Social Networks
   - Foursquare
   - Waze
-  - Google
 - Email Support (Most likely Sendgrid)
 - internalization(i18n) Support
 - Google Analytics
