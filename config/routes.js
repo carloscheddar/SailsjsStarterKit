@@ -42,6 +42,8 @@ module.exports.routes = {
   '/auth/twitter/callback' : 'AuthController.twitterProcess',
   '/auth/facebook'         : 'AuthController.facebookLogin',
   '/auth/facebook/callback': 'AuthController.facebookProcess',
+  '/auth/google'           : 'AuthController.googleLogin',
+  '/auth/google/callback'  : 'AuthController.googleProcess',
 
   /*
   // But what if you want your home page to display

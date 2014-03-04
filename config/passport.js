@@ -1,8 +1,9 @@
-var passport = require("passport"),
-  LocalStrategy = require("passport-local").Strategy,
-  bcrypt = require("bcrypt"),
-  TwitterStrategy = require("passport-twitter").Strategy,
-  FacebookStrategy = require('passport-facebook').Strategy;
+var passport = require("passport")
+  , LocalStrategy = require("passport-local").Strategy
+  , bcrypt = require("bcrypt")
+  , TwitterStrategy = require("passport-twitter").Strategy
+  , FacebookStrategy = require('passport-facebook').Strategy
+  , GoogleStrategy = require('passport-google').Strategy;
 
 passport.serializeUser(function(user, done) {
   done(null, user.id);
@@ -55,7 +56,11 @@ passport.use(new TwitterStrategy({
     callbackURL: "http://127.0.0.1:1337/auth/twitter/callback"
   },
   function(token, tokenSecret, profile, done) {
-    findOrCreate(profile, done);
+    findOrCreate({
+      username: profile.username,
+      provider: profile.provider
+    }
+    , done);
   }
 ));
 
@@ -68,9 +73,31 @@ passport.use(new FacebookStrategy({
     callbackURL: "http://127.0.0.1:1337/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
-    findOrCreate(profile, done);
+    findOrCreate({
+      username: profile.username,
+      provider: profile.provider
+    }
+    , done);
   }
 ));
+
+/*
+ Passport Google Strategy
+*/
+passport.use(new GoogleStrategy({
+    returnURL: 'http://127.0.0.1:1337/auth/google/callback',
+    realm: 'http://127.0.0.1:1337/'
+  },
+  function(identifier, profile, done) {
+    findOrCreate({
+      username: profile.displayName,
+      email: profile.emails[0].value,
+      provider: 'google'
+    }
+    , done);
+  }
+));
+
 /*
  Initialize Passport
 */
@@ -89,21 +116,18 @@ module.exports = {
  Helper Functions
 */
 
-findOrCreate = function(profile, done) {
+findOrCreate = function(userValues, done) {
   User.findOne({
-    username: profile.username
+    username: userValues.username
   })
     .where({
-      provider: profile.provider
+      provider: userValues.provider
     })
     .then(function(user) {
       if (user) {
         return user;
       } else {
-        return User.create({
-          username: profile.username,
-          provider: profile.provider
-        });
+        return User.create(userValues);
       }
     }).then(function(user) {
       done(null, user);

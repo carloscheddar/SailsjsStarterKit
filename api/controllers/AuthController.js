@@ -59,6 +59,14 @@ module.exports = {
       { successRedirect: '/',
         failureRedirect: '/login' })(req, res, next);
   },
+  googleLogin: function(req, res) {
+    passport.authenticate('google')(req, res);
+  },
+  googleProcess: function(req, res, next) {
+    passport.authenticate('google',
+      { successRedirect: '/',
+        failureRedirect: '/login' })(req, res, next);
+  },
   logout: function(req, res) {
     req.logout();
     res.send("logout successful");
