@@ -42,6 +42,7 @@ To create an empty Sails.js app that already has tools installed.
 - Email Support (Most likely Sendgrid)
 - internalization(i18n) Support
 - Google Analytics
+- Easy Heroku Deployment
 - Password Reset
 - Flash Messages
 - Console Helpers
