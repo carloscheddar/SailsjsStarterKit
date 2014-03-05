@@ -3,6 +3,7 @@ var passport = require("passport")
   , bcrypt = require("bcrypt")
   , TwitterStrategy = require("passport-twitter").Strategy
   , FacebookStrategy = require('passport-facebook').Strategy
+  , GitHubStrategy = require('passport-github').Strategy
   , GoogleStrategy = require('passport-google').Strategy;
 
 passport.serializeUser(function(user, done) {
@@ -98,6 +99,23 @@ passport.use(new GoogleStrategy({
   }
 ));
 
+/*
+ Passport GitHub Strategy
+*/
+passport.use(new GitHubStrategy({
+    clientID: process.env.GITHUB_CLIENT_ID,
+    clientSecret: process.env.GITHUB_CLIENT_SECRET,
+    callbackURL: "http://127.0.0.1:1337/auth/github/callback"
+  },
+  function(accessToken, refreshToken, profile, done) {
+    findOrCreate({
+      username: profile.username,
+      email: profile.emails[0].value,
+      provider: 'github'
+    }
+    , done);
+  }
+));
 /*
  Initialize Passport
 */

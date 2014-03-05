@@ -67,6 +67,14 @@ module.exports = {
       { successRedirect: '/',
         failureRedirect: '/login' })(req, res, next);
   },
+  githubLogin: function(req, res) {
+    passport.authenticate('github')(req, res);
+  },
+  githubProcess: function(req, res, next) {
+    passport.authenticate('github',
+      { successRedirect: '/',
+        failureRedirect: '/login' })(req, res, next);
+  },
   logout: function(req, res) {
     req.logout();
     res.send("logout successful");
