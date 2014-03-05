@@ -92,7 +92,7 @@ passport.use(new GoogleStrategy({
   function(identifier, profile, done) {
     findOrCreate({
       username: profile.displayName,
-      email: profile.emails[0].value,
+      // email: profile.emails[0].value,
       provider: 'google'
     }
     , done);
@@ -110,7 +110,7 @@ passport.use(new GitHubStrategy({
   function(accessToken, refreshToken, profile, done) {
     findOrCreate({
       username: profile.username,
-      email: profile.emails[0].value,
+      // email: profile.emails[0].value,
       provider: 'github'
     }
     , done);
