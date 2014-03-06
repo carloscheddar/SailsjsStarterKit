@@ -27,6 +27,6 @@ module.exports.adapters = {
   // MongoDB support
   mongo: {
     module   : 'sails-mongo',
-    url      : process.env.MONGOHQ_URL || 'mongodb://localhost:27017/sailsStarterKit'
+    url      : process.env.MONGOLAB_URI || 'mongodb://localhost:27017/sailsStarterKit'
   }
 };
