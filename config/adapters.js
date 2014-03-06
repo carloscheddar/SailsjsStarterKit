@@ -12,23 +12,44 @@
  * http://sailsjs.org/#documentation
  */
 
-module.exports.adapters = {
+if (!process.env.MONGOHQ_URL) {
+  module.exports.adapters = {
 
-  // If you leave the adapter config unspecified
-  // in a model definition, 'default' will be used.
-  'default': 'mongo',
+    // If you leave the adapter config unspecified
+    // in a model definition, 'default' will be used.
+    'default': 'mongo',
 
-  // Persistent adapter for DEVELOPMENT ONLY
-  // (data is preserved when the server shuts down)
-  // disk: {
-  //   module: 'sails-disk'
-  // },
+    // Persistent adapter for DEVELOPMENT ONLY
+    // (data is preserved when the server shuts down)
+    // disk: {
+    //   module: 'sails-disk'
+    // },
 
-  // MongoDB support
-  mongo: {
-    module   : 'sails-mongo',
-    host     : process.env.MONGO_URL,
-    port     : process.env.MONGO_PORT,
-    database : process.env.DB_NAME,
-  }
-};
+    // MongoDB support
+    mongo: {
+      module   : 'sails-mongo',
+      host     : 'localhost',
+      port     : 27017,
+      database : 'sailsStarterKit',
+    }
+  };
+}
+else {
+  module.exports.adapters = {
+
+    // If you leave the adapter config unspecified
+    // in a model definition, 'default' will be used.
+    'default': 'mongo',
+
+    // Persistent adapter for DEVELOPMENT ONLY
+    // (data is preserved when the server shuts down)
+    // disk: {
+    //   module: 'sails-disk'
+    // },
+
+    // MongoDB support
+    mongo: {
+      url: process.env.MONGOHQ_URL
+    }
+  };
+}
