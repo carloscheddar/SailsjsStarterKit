@@ -19,6 +19,8 @@ To create an empty Sails.js app that already has tools installed.
 - MongoDB Support
 - Session Storage using MongoDB
 - Environment file at root(.env)
+- Internalization(i18n) Support
+- Google Analytics
 - Console Helpers
 	- Show user where {type: value} if empty shows all users
   - Destroy All
@@ -32,16 +34,7 @@ To create an empty Sails.js app that already has tools installed.
 - Install Nodemon (https://github.com/remy/nodemon)
 
 ### To Do
-- Angular.js Support
-- jQuery Support
-- Passport.js
-	- OAuth Suport
-	- Social Networks
-  - Foursquare
-  - Waze
 - Email Support (Most likely Sendgrid)
-- internalization(i18n) Support
-- Google Analytics
 - Easy Heroku Deployment
 - Password Reset
 - Flash Messages
@@ -53,6 +46,7 @@ To create an empty Sails.js app that already has tools installed.
     ```nodemon -e js,coffee app.js```
 - Use an HTML to Jade converter for the templates found online. I've been using this one http://html2jade.aaron-powell.com/
 - Use autoenv to automatically load the .env file to the environment.
+- You must add your google analytics token in order to get the data
 
 
 ### Bugs
