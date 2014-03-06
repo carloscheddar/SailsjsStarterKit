@@ -49,6 +49,7 @@ else {
 
     // MongoDB support
     mongo: {
+      module   : 'sails-mongo',
       url: process.env.MONGOHQ_URL
     }
   };
