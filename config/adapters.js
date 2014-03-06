@@ -29,6 +29,6 @@ module.exports.adapters = {
     module   : 'sails-mongo',
     host     : process.env.MONGO_URL,
     port     : process.env.MONGO_PORT,
-    database : 'sailsStarterKit',
+    database : process.env.DB_NAME,
   }
 };
