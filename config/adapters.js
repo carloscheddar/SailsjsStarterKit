@@ -27,8 +27,8 @@ module.exports.adapters = {
   // MongoDB support
   mongo: {
     module   : 'sails-mongo',
-    host     : 'localhost',
-    port     : 27017,
+    host     : process.env.MONGO_URL,
+    port     : process.env.MONGO_PORT,
     database : 'sailsStarterKit',
   }
 };
