@@ -54,7 +54,7 @@ passport.use(new LocalStrategy({
 passport.use(new TwitterStrategy({
     consumerKey: process.env.TWITTER_CONSUMER_KEY,
     consumerSecret: process.env.TWITTER_CONSUMER_SECRET,
-    callbackURL: "http://127.0.0.1:1337/auth/twitter/callback"
+    callbackURL: process.env.ROOT_URL + '/auth/twitter/callback'|| "http://127.0.0.1:1337/auth/twitter/callback"
   },
   function(token, tokenSecret, profile, done) {
     findOrCreate({
@@ -71,7 +71,7 @@ passport.use(new TwitterStrategy({
 passport.use(new FacebookStrategy({
     clientID: process.env.FACEBOOK_APP_ID,
     clientSecret: process.env.FACEBOOK_APP_SECRET,
-    callbackURL: "http://127.0.0.1:1337/auth/facebook/callback"
+    callbackURL: process.env.ROOT_URL + '/auth/facebook/callback'|| "http://127.0.0.1:1337/auth/facebook/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     findOrCreate({
@@ -86,8 +86,8 @@ passport.use(new FacebookStrategy({
  Passport Google Strategy
 */
 passport.use(new GoogleStrategy({
-    returnURL: 'http://127.0.0.1:1337/auth/google/callback',
-    realm: 'http://127.0.0.1:1337/'
+    returnURL: process.env.ROOT_URL + '/auth/google/callback'|| 'http://127.0.0.1:1337/auth/google/callback',
+    realm: process.env.ROOT_URL || 'http://127.0.0.1:1337/'
   },
   function(identifier, profile, done) {
     findOrCreate({
@@ -105,7 +105,7 @@ passport.use(new GoogleStrategy({
 passport.use(new GitHubStrategy({
     clientID: process.env.GITHUB_CLIENT_ID,
     clientSecret: process.env.GITHUB_CLIENT_SECRET,
-    callbackURL: "http://127.0.0.1:1337/auth/github/callback"
+    callbackURL: process.env.ROOT_URL + '/auth/github/callback'|| "http://127.0.0.1:1337/auth/github/callback"
   },
   function(accessToken, refreshToken, profile, done) {
     findOrCreate({
