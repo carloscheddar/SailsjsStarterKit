@@ -1,3 +1,7 @@
 {
-  "Login": "Please login using any of these methods"
+  "AppName": "Sails Starter Kit",
+  "Home": "Home",
+  "Login": "Login",
+  "Create": "Create Account",
+  "PleaseLogin": "Please login using any of these methods"
 }
