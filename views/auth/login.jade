@@ -1,25 +1,31 @@
-h1=__('Login')
+extends ../base.jade
 
-form(action='/login', method='post')
+block content
+
+  link(rel='stylesheet', href='linker/styles/login.css')
+
+  h1=__('Login')
+
+  form(action='/login', method='post')
+    div
+      label Email:
+      input(type='text', name='email')
+    div
+      label Password:
+      input(type='password', name='password')
+    div
+      input(type='submit', value='Log In')
+
   div
-    label Email:
-    input(type='text', name='email')
+    a(href='/auth/twitter') Twitter Login
+
   div
-    label Password:
-    input(type='password', name='password')
+    a(href='/auth/facebook') Facebook Login
+
   div
-    input(type='submit', value='Log In')
+    a(href='/auth/google') Google Login
 
-div
-  a(href='/auth/twitter') Twitter Login
+  div
+    a(href='/auth/github') GitHub Login
 
-div
-  a(href='/auth/facebook') Facebook Login
-
-div
-  a(href='/auth/google') Google Login
-
-div
-  a(href='/auth/github') GitHub Login
-
-include ../ga.jade
+  include ../ga.jade
