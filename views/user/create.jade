@@ -1,18 +1,52 @@
 extends ../base.jade
 
+//- block content
+//-   .container
+//-     link(rel='stylesheet', href='linker/styles/login.css')
+
+//-     h2.borderBottom=__("SignUp")
+//-     form(action='/create', method='post')
+//-       p
+//-         label Placeholder:
+//-         input#email(type='text', name='email', placeholder='Email')
+//-       p
+//-         label Placeholder:
+//-         input#username(type='text', name='username', placeholder='Username')
+//-       p
+//-         label Placeholder:
+//-         input#password(type='password', name='password', placeholder='Password')
+//-       p
+//-         input(type='submit', value='Sign Up')
+
+//-       div
+//-         a.nav-link.main-home-btn.main-btn(href='#')=__("SignUp")
+
+
 block content
-  link(rel='stylesheet', href='linker/styles/login.css')
-  form(action='/create', method='post')
-    p
-      label(for='email') Email:
-      input#email(type='text', name='email')
-    p
-      label(for='username') Username:
-      input#username(type='text', name='username')
-    p
-      label(for='password') Password:
-      input#password(type='password', name='password')
-    p
-      input(type='submit', value='Sign Up')
+  .container
+    link(rel='stylesheet', href='linker/styles/create.css')
+    h3.borderBottom=__("SignUp")
+    .container.form-box
+      form.form-horizontal(role='form')
+        .form-group
+          label.col-sm-2.control-label(for='email') Email
+          .col-sm-10
+            input#inputEmail3.form-control.form-border(type='email', placeholder='Email')
+        .form-group
+          label.col-sm-2.control-label(for='username') Username
+          .col-sm-10
+            input#inputEmail3.form-control.form-border(type='username', placeholder='Username')
+        .form-group
+          label.col-sm-2.control-label(for='password') Password
+          .col-sm-10
+            input#inputPassword3.form-control.form-border(type='password', placeholder='Password')
+          //- div
+          //-   a.nav-link.main-home-btn.main-btn(href='#')=__("SignUp")
+          div.col-sm-offset-2.col-sm-10
+            button.nav-link.main-home-btn.main-btn(type='submit')=__("SignUp")
+
+
+
+
 
 include ../ga.jade

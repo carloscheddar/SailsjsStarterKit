@@ -1,1 +1,60 @@
 @import "bootstrap";
+
+.nav-link {
+  float: left;
+  display: block;
+  // padding: 9px 17px;
+  margin-top: 0px;
+  line-height: 18px;
+  text-align: center;
+  font-weight: 600;
+  margin: 21px 0;
+}
+
+.main-btn {
+  color: white;
+  text-shadow: 0 0 10px white;
+  background: transparent;
+  border: 1px solid white;
+  margin-left: 30%;
+}
+
+.main-btn:hover {
+  color: white;
+  text-shadow: 0 0 10px #1681f9;
+  background: none;
+  border: 1px solid white;
+}
+
+.main-home-btn {
+  color: white;
+  background: rgba(26,26,26, 1);
+  border: 1px solid rgba(26,26,26, 1);
+  padding: 12px 60px;
+  text-shadow: none;
+  text-transform: uppercase;
+  // margin-top: 45px;
+}
+
+.main-home-btn:hover {
+  text-shadow: none;
+  color: rgba(26,26,26, 1);
+  background: white;
+  border: 2px solid rgba(26,26,26, 1);
+  text-decoration: none;
+}
+
+.borderBottom{
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(229, 229, 229);
+}
+
+.form-border {
+  border: 1px solid rgba(26,26,26, 1);
+  border-radius: 0;
+}
+
+.form-box {
+  width: 70%;
+}

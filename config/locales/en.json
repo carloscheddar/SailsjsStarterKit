@@ -3,5 +3,6 @@
   "Home": "Home",
   "Login": "Login",
   "Create": "Create Account",
-  "PleaseLogin": "Please login using any of these methods"
+  "PleaseLogin": "Please login using any of these methods",
+  "SignUp": "Sign Up"
 }
