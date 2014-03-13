@@ -4,31 +4,6 @@ block content
 
   link(rel='stylesheet', href='linker/styles/login.css')
   .container
-    //- h3.border-bottom=__("PleaseLogin")
-
-    //- form(action='/login', method='post')
-    //-   div
-    //-     label Email:
-    //-     input(type='text', name='email')
-    //-   div
-    //-     label Password:
-    //-     input(type='password', name='password')
-    //-   div
-    //-     input(type='submit', value='Log In')
-
-    //- div
-    //-   a(href='/auth/twitter') Twitter Login
-
-    //- div
-    //-   a(href='/auth/facebook') Facebook Login
-
-    //- div
-    //-   a(href='/auth/google') Google Login
-
-    //- div
-    //-   a(href='/auth/github') GitHub Login
-
-
     h3.border-bottom=__("PleaseLogin")
     .container.form-box
       form.form-horizontal(role='form', action='/login', method='post')
@@ -43,17 +18,17 @@ block content
           div.col-sm-offset-2.col-sm-10
             button.btn-nice(type='submit', value='Log In')=__("Login")
 
-          ul
-            li
+          ul.col-sm-offset-2.col-sm-10
+            li.btn-nice.btn-twitter
               a(href='/auth/twitter') Twitter
 
-            li
+            li.btn-nice.btn-facebook
               a(href='/auth/facebook') Facebook
 
-            li
+            li.btn-nice.btn-google
               a(href='/auth/google') Google
 
-            li
+            li.btn-nice.btn-github
               a(href='/auth/github') GitHub
 
   include ../ga.jade
