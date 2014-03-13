@@ -79,6 +79,8 @@ To every jade file added you must include this `include ../ga.jade` if you want 
 - Console Helpers
   - Destroy user where...
 - Add secrets configuration as an alternative to .env variables
+- Add input validation for multiple keys
+- Add cool icons
 
 ### Bugs
 - 2 Errors when server is started. It's triggered in Gruntfile.js line 447 by Compass.
