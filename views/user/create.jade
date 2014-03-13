@@ -5,19 +5,19 @@ block content
     link(rel='stylesheet', href='linker/styles/create.css')
     h3.border-bottom=__("SignUp")
     .container.form-box
-      form.form-horizontal(role='form')
+      form.form-horizontal(role='form', action='/create', method='post')
         .form-group
           label.col-sm-2.control-label(for='email') Email
           .col-sm-10
-            input.form-control.form-border(type='email', placeholder='Email')
+            input.form-control.form-border(type='email', name='email' placeholder='Email')
         .form-group
           label.col-sm-2.control-label(for='username') Username
           .col-sm-10
-            input.form-control.form-border(type='username', placeholder='Username')
+            input.form-control.form-border(type='username', name='username' placeholder='Username')
         .form-group
           label.col-sm-2.control-label(for='password') Password
           .col-sm-10
-            input.form-control.form-border(type='password', placeholder='Password')
+            input.form-control.form-border(type='password', name='password' placeholder='Password')
           div.col-sm-offset-2.col-sm-10
             button.btn-nice(type='submit')=__("SignUp")
 

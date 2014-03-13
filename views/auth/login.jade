@@ -4,28 +4,56 @@ block content
 
   link(rel='stylesheet', href='linker/styles/login.css')
   .container
-    h1=__("PleaseLogin")
+    //- h3.border-bottom=__("PleaseLogin")
 
-    form(action='/login', method='post')
-      div
-        label Email:
-        input(type='text', name='email')
-      div
-        label Password:
-        input(type='password', name='password')
-      div
-        input(type='submit', value='Log In')
+    //- form(action='/login', method='post')
+    //-   div
+    //-     label Email:
+    //-     input(type='text', name='email')
+    //-   div
+    //-     label Password:
+    //-     input(type='password', name='password')
+    //-   div
+    //-     input(type='submit', value='Log In')
 
-    div
-      a(href='/auth/twitter') Twitter Login
+    //- div
+    //-   a(href='/auth/twitter') Twitter Login
 
-    div
-      a(href='/auth/facebook') Facebook Login
+    //- div
+    //-   a(href='/auth/facebook') Facebook Login
 
-    div
-      a(href='/auth/google') Google Login
+    //- div
+    //-   a(href='/auth/google') Google Login
 
-    div
-      a(href='/auth/github') GitHub Login
+    //- div
+    //-   a(href='/auth/github') GitHub Login
+
+
+    h3.border-bottom=__("PleaseLogin")
+    .container.form-box
+      form.form-horizontal(role='form', action='/login', method='post')
+        .form-group
+          label.col-sm-2.control-label(for='email') Email
+          .col-sm-10
+            input.form-control.form-border(type='email', name='email', placeholder='Email')
+        .form-group
+          label.col-sm-2.control-label(for='password') Password
+          .col-sm-10
+            input.form-control.form-border(type='password', name='password', placeholder='Password')
+          div.col-sm-offset-2.col-sm-10
+            button.btn-nice(type='submit', value='Log In')=__("Login")
+
+          ul
+            li
+              a(href='/auth/twitter') Twitter
+
+            li
+              a(href='/auth/facebook') Facebook
+
+            li
+              a(href='/auth/google') Google
+
+            li
+              a(href='/auth/github') GitHub
 
   include ../ga.jade
