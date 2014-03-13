@@ -1,5 +1,11 @@
 @import 'bootstrap';
 
+.border-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(229, 229, 229);
+  padding-bottom: 10px;
+}
 
 .btn-nice {
   padding: 9px 17px;
@@ -27,4 +33,8 @@
   border: 1px solid rgba(26,26,26, 1);
   -webkit-box-shadow: none;
   box-shadow: none;
+}
+
+.form-box {
+  width: 70%;
 }
