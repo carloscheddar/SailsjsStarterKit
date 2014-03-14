@@ -16,7 +16,9 @@ block content
           .col-sm-10
             input.form-control.form-border(type='password', name='password', placeholder='Password')
           div.col-sm-offset-2.col-sm-10
-            button.btn-nice(type='submit', value='Log In')=__("Login")
+            button.btn-nice.icon-social(type='submit', value='Log In')
+              i.fa.fa-unlock
+              =__("Login")
 
           p.col-sm-offset-2.col-sm-10.or-login=__("OrLogin")
 
@@ -24,7 +26,7 @@ block content
 
         li
           form(action='/auth/facebook', method='get')
-            button.btn-nice.btn-facebook.icon-social#facebook(type='submit')
+            button.btn-nice.btn-facebook.icon-social(type='submit')
               i.fa.fa-facebook
               | Facebook
         li
