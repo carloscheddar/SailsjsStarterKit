@@ -1,7 +1,7 @@
 extends ../base.jade
 
 block content
-
+  link(href='//netdna.bootstrapcdn.com/font-awesome/4.0.3/css/font-awesome.css', rel='stylesheet')
   link(rel='stylesheet', href='linker/styles/login.css')
   .container
     h3.border-bottom=__("Login")
@@ -24,15 +24,23 @@ block content
 
         li
           form(action='/auth/facebook', method='get')
-            button.btn-nice.btn-facebook(type='submit') Facebook
+            button.btn-nice.btn-facebook.icon-social#facebook(type='submit')
+              i.fa.fa-facebook
+              | Facebook
         li
           form(action='/auth/google', method='get')
-            button.btn-nice.btn-google(type='submit') Google
+            button.btn-nice.btn-google.icon-social(type='submit')
+              i.fa.fa-google-plus
+              | Google
         li
           form(action='/auth/twitter', method='get')
-            button.btn-nice.btn-twitter(type='submit') Twitter
+            button.btn-nice.btn-twitter.icon-social(type='submit')
+              i.fa.fa-twitter
+              | Twitter
         li
           form(action='/auth/github', method='get')
-            button.btn-nice.btn-github(type='submit') GitHub
+            button.btn-nice.btn-github.icon-social(type='submit')
+              i.fa.fa-github
+              | GitHub
 
   include ../ga.jade

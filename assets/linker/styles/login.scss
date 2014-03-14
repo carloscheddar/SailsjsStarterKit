@@ -66,3 +66,10 @@ li {
 .or-login {
   color: rgba(135, 135, 135, 1);
 }
+
+.icon-social {
+  :first-child {
+    font-size: 1.6em;
+    padding-right: .5em;
+  }
+}
