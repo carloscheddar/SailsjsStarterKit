@@ -2,7 +2,9 @@
   "AppName": "Sails Starter Kit",
   "Home": "Home",
   "Login": "Login",
+  "Email": "Email",
+  "Password": "Password",
   "Create": "Create Account",
-  "PleaseLogin": "Use any of these methods to login",
+  "OrLogin": "Or use any of these methods:",
   "SignUp": "Sign Up"
 }

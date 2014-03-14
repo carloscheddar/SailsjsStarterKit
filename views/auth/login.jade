@@ -4,31 +4,35 @@ block content
 
   link(rel='stylesheet', href='linker/styles/login.css')
   .container
-    h3.border-bottom=__("PleaseLogin")
+    h3.border-bottom=__("Login")
     .container.form-box
       form.form-horizontal(role='form', action='/login', method='post')
         .form-group
-          label.col-sm-2.control-label(for='email') Email
+          label.col-sm-2.control-label(for='email')=__("Email")
           .col-sm-10
             input.form-control.form-border(type='email', name='email', placeholder='Email')
         .form-group
-          label.col-sm-2.control-label(for='password') Password
+          label.col-sm-2.control-label(for='password')=__("Password")
           .col-sm-10
             input.form-control.form-border(type='password', name='password', placeholder='Password')
           div.col-sm-offset-2.col-sm-10
             button.btn-nice(type='submit', value='Log In')=__("Login")
 
-          ul.col-sm-offset-2.col-sm-10
-            li.btn-nice.btn-twitter
-              a(href='/auth/twitter') Twitter
+          p.col-sm-offset-2.col-sm-10.or-login=__("OrLogin")
 
-            li.btn-nice.btn-facebook
-              a(href='/auth/facebook') Facebook
+      ul.col-sm-offset-2.col-sm-10
 
-            li.btn-nice.btn-google
-              a(href='/auth/google') Google
-
-            li.btn-nice.btn-github
-              a(href='/auth/github') GitHub
+        li
+          form(action='/auth/facebook', method='get')
+            button.btn-nice.btn-facebook(type='submit') Facebook
+        li
+          form(action='/auth/google', method='get')
+            button.btn-nice.btn-google(type='submit') Google
+        li
+          form(action='/auth/twitter', method='get')
+            button.btn-nice.btn-twitter(type='submit') Twitter
+        li
+          form(action='/auth/github', method='get')
+            button.btn-nice.btn-github(type='submit') GitHub
 
   include ../ga.jade

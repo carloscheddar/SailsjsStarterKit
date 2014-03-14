@@ -5,11 +5,7 @@ $github-color: #262626;
 
 
 li {
-  display: inline;
-}
-
-a {
-  color: #fff;
+  display: inline-block;
 }
 
 .btn-twitter {
@@ -20,7 +16,6 @@ a {
 .btn-twitter:hover {
   a {
     color: $twitter-color;
-    text-decoration: none;
   }
 
   color: $twitter-color;
@@ -35,7 +30,6 @@ a {
 .btn-facebook:hover {
   a {
     color: $facebook-color;
-    text-decoration: none;
   }
 
   color: $facebook-color;
@@ -50,7 +44,6 @@ a {
 .btn-google:hover {
   a {
     color: $google-color;
-    text-decoration: none;
   }
 
   color: $google-color;
@@ -65,8 +58,11 @@ a {
 .btn-github:hover {
   a {
     color: $github-color;
-    text-decoration: none;
   }
 
   border: 2px solid $github-color;
+}
+
+.or-login {
+  color: rgba(135, 135, 135, 1);
 }
