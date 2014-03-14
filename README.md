@@ -71,6 +71,8 @@ To every jade file added you must include this `include ../ga.jade` if you want 
 - Use an [html2jade](http://html2jade.aaron-powell.com/) converter for the templates found online.
 
 ### To Do
+- Front-End
+- Add a Get Started in the ReadMe
 - Email Support (Most likely Sendgrid)
 - Password Reset
 - Flash Messages
