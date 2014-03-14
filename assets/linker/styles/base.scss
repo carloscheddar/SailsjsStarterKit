@@ -1,0 +1,42 @@
+@import 'bootstrap';
+
+.border-bottom {
+  border-bottom-width: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: rgb(229, 229, 229);
+  padding-bottom: 10px;
+}
+
+.btn-nice {
+  // padding: 9px 17px;
+  height: 3em;
+  width: 6em;
+  line-height: 18px;
+  font-weight: 400;
+  margin: 21px 0;
+  color: #fff;
+  background: rgba(26, 26, 26, 1);
+  border: 2px solid rgba(26, 26, 26, 1);
+}
+
+.btn-nice:hover {
+  color: rgba(26, 26, 26, 1);
+  background: #fff;
+  border: 2px solid rgba(26, 26, 26, 1);
+  text-decoration: none;
+}
+
+.form-border {
+  border: 1px solid #cccccc;
+  border-radius: 0;
+}
+
+.form-border:focus {
+  border: 1px solid rgba(26,26,26, 1);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
+
+.form-box {
+  width: 70%;
+}

@@ -1,3 +1,10 @@
 {
-  "Login": "Please login using any of these methods"
+  "AppName": "Sails Starter Kit",
+  "Home": "Home",
+  "Login": "Login",
+  "Email": "Email",
+  "Password": "Password",
+  "Create": "Create Account",
+  "OrLogin": "Or use any of these methods:",
+  "SignUp": "Sign Up"
 }
