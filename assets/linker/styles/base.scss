@@ -9,13 +9,14 @@
 
 .btn-nice {
   height: 3em;
-  width: 7.5em;
+  // width: 7.5em;
   line-height: 18px;
   font-weight: 400;
   margin: 21px 0;
   color: #fff;
   background: rgba(26, 26, 26, 1);
   border: 2px solid rgba(26, 26, 26, 1);
+  border-radius: 0;
 }
 
 .btn-nice:hover {
@@ -38,4 +39,11 @@
 
 .form-box {
   width: 70%;
+}
+
+.btn-icon {
+  :first-child {
+    font-size: 2em;
+    width: 40px;
+  }
 }
