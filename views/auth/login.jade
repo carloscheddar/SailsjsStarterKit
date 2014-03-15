@@ -15,26 +15,26 @@ block content
           label.col-sm-2.control-label(for='password')=__("Password")
           .col-sm-10
             input.form-control.form-border(type='password', name='password', placeholder='Password')
-          div.col-sm-offset-2.col-sm-10
-            button.btn-nice.btn-icon(type='submit', value='Log In')
+          .col-xs-offset-0.col-md-offset-2
+            button.btn-nice.col-xs-11.col-sm-3.btn-icon(type='submit', value='Log In')
               i.fa.fa-unlock
               span=__("Login")
 
-          p.col-sm-offset-2.col-sm-10.or-login=__("OrLogin")
+          p.col-md-offset-2.col-xs-12.or-login=__("OrLogin")
 
 
-    .row.col-md-offset-4
-      a.btn.btn-nice.btn-facebook.col-xs-6.col-md-2.col-xs-offset-0.icon-social#facebook(href='/auth/facebook')
-        i.fa.fa-facebook
-        span Facebook
-      a.btn.btn-nice.btn-twitter.col-xs-6.col-md-2.col-xs-offset-0.icon-social(href='/auth/twitter')
-        i.fa.fa-twitter
-        span Twitter
-      a.btn.btn-nice.btn-google.col-xs-6.col-md-2.col-xs-offset-0.icon-social(href='/auth/google')
-        i.fa.fa-google-plus
-        span Google
-      a.btn.btn-nice.btn-github.col-xs-6.col-md-2.col-xs-offset-0.icon-social(href='/auth/github')
-        i.fa.fa-github
-        span Github
+      .row.col-md-offset-2
+        a.btn.btn-nice.btn-facebook.col-xs-6.col-md-3.col-xs-offset-0.icon-social(href='/auth/facebook')
+          i.fa.fa-facebook
+          span Facebook
+        a.btn.btn-nice.btn-twitter.col-xs-6.col-md-3.col-xs-offset-0.icon-social(href='/auth/twitter')
+          i.fa.fa-twitter
+          span Twitter
+        a.btn.btn-nice.btn-google.col-xs-6.col-md-3.col-xs-offset-0.icon-social(href='/auth/google')
+          i.fa.fa-google-plus
+          span Google
+        a.btn.btn-nice.btn-github.col-xs-6.col-md-3.col-xs-offset-0.icon-social(href='/auth/github')
+          i.fa.fa-github
+          span Github
 
   include ../ga.jade
