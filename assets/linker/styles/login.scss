@@ -72,6 +72,7 @@ li {
     font-size: 2em;
     width: 40px;
   }
+
   left: .5%;
   text-align: left;
   margin: 0;
@@ -79,9 +80,9 @@ li {
   @media (max-width: 768px) {
     left: 0;
    }
-}
 
-span {
-  position: absolute;
-  top: 25%;
+  span {
+    position: absolute;
+    top: 25%;
+  }
 }

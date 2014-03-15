@@ -46,11 +46,17 @@
     font-size: 2em;
     width: 40px;
   }
+
   left: 2.2%;
   text-align: left;
 
   @media (max-width: 768px) {
     left: 6%;
     width: 88%;
+  }
+
+  span {
+    position: absolute;
+    top: 25%;
   }
 }
