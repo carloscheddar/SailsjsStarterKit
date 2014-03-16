@@ -22,11 +22,6 @@ li {
   border: 2px solid $twitter-color;
 }
 
-.btn-facebook {
-  background: $facebook-color;
-  border: 2px solid $facebook-color;
-}
-
 .btn-facebook:hover {
   a {
     color: $facebook-color;
@@ -79,10 +74,48 @@ li {
 
   @media (max-width: 768px) {
     left: 0;
+    width: 18%;
+
+    :first-child {
+      position: absolute;
+      left: 20%;
+    }
+
+    span {
+      display: none;
+    }
    }
 
   span {
     position: absolute;
     top: 25%;
+  }
+}
+
+.btn-facebook {
+  background: $facebook-color;
+  border: 2px solid $facebook-color;
+    @media (max-width: 768px) {
+    :first-child {
+      left: 36%;
+    }
+  }
+}
+
+.btn-github {
+  background: $github-color;
+  border: 2px solid $github-color;
+  @media (max-width: 768px) {
+    :first-child {
+      left: 23%;
+    }
+  }
+}
+
+
+.row-adjust {
+  @media (max-width: 768px) {
+    position: relative;
+    left: 15%;
   }
 }
